@@ -1,66 +1,66 @@
-@import '../../colorSheets';
-#BoxscoreCarouselContainer{
-    text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: #ffffff;
-    margin-top: 20px;
-    .slick-arrow::before{
-        color: $mainBlue;
+@import "../../colorSheets";
+#BoxscoreCarouselContainer {
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #ffffff;
+  margin-top: 20px;
+  padding-bottom: 27px;
+  .slick-arrow::before {
+    color: $mainBlue;
+  }
+}
+.BoxscoreItem {
+  display: flex;
+  flex-direction: row;
+  .BoxscoreItemPic {
+    img {
+      max-width: 50px;
+      max-height: 50px;
     }
-}
-.BoxscoreItem{
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.BoxscoreItemScoreHome{
-    margin-bottom: 0;
-    padding-bottom: 7px;
-}
-.BoxscoreItemScoreAway{
-    margin-top: 0;
-    padding-top: 7px;
-}
-#test{
-    position: relative;
-    div{
-      
-        opacity: 0.1;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
+    width: 25%;
+  }
+  .BoxscoreItemName {
+    width: 50%;
+    h4 {
+      margin-top: 11.5px;
+      margin-bottom: 0px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-}
-#test2{
-    position: relative;
-    ::after{
-        content: "";
-        opacity: 0.1;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+  }
+  .BoxscoreItemScore {
+    width: 25%;
+    h4 {
+      margin-top: 14.5px;
+      margin-bottom: 0px;
     }
+  }
 }
-#todayDate{
+.BoxscoreItemContainer{
     margin-left: 2%;
     margin-right: 2%;
+    border: 1px solid $darkBlue;
 }
-#dayBefore{
-    cursor: pointer;
+.BoxscoreItemInfo {
+  justify-content: space-evenly;
 }
-#dayAfter{
-    cursor: pointer;
+.BoxscoreItemInfomoreInfo {
+  margin: 0 auto;
+}
+#todayDate {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+#dayBefore {
+  cursor: pointer;
+}
+#dayAfter {
+  cursor: pointer;
+}
+#boxscoreLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
