@@ -1,0 +1,10 @@
+@import "./../../colorSheets";
+.HamburgerBars {
+  direction: rtl;
+  color: $mainBlue;
+  .fa-bars {
+    padding-top: 1%;
+    padding-right: 2%;
+    cursor: pointer;
+  }
+}

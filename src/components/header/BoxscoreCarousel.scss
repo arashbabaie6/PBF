@@ -1,0 +1,66 @@
+@import '../../colorSheets';
+#BoxscoreCarouselContainer{
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #ffffff;
+    margin-top: 20px;
+    .slick-arrow::before{
+        color: $mainBlue;
+    }
+}
+.BoxscoreItem{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.BoxscoreItemScoreHome{
+    margin-bottom: 0;
+    padding-bottom: 7px;
+}
+.BoxscoreItemScoreAway{
+    margin-top: 0;
+    padding-top: 7px;
+}
+#test{
+    position: relative;
+    div{
+      
+        opacity: 0.1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+}
+#test2{
+    position: relative;
+    ::after{
+        content: "";
+        opacity: 0.1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+#todayDate{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#dayBefore{
+    cursor: pointer;
+}
+#dayAfter{
+    cursor: pointer;
+}
