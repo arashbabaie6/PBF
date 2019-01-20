@@ -6,9 +6,23 @@
   background-color: #ffffff;
   margin-top: 20px;
   padding-bottom: 27px;
+
+ 
   .slick-arrow::before {
     color: $mainBlue;
   }
+  .BoxscoreItemContainer {
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 1px solid $darkBlue;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+}
+#boxscoreNbaLogo{
+  position: absolute;
+  opacity: 0.5;
 }
 .BoxscoreItem {
   display: flex;
@@ -23,7 +37,7 @@
   .BoxscoreItemName {
     width: 50%;
     h4 {
-      margin-top: 11.5px;
+      margin-top: 14.5px;
       margin-bottom: 0px;
       white-space: nowrap;
       overflow: hidden;
@@ -38,11 +52,19 @@
     }
   }
 }
-.BoxscoreItemContainer{
-    margin-left: 2%;
-    margin-right: 2%;
-    border: 1px solid $darkBlue;
+.Away {
+  .BoxscoreItemName {
+    h4 {
+      margin-top: 11px;
+    }
+  }
+  .BoxscoreItemScore {
+    h4 {
+      margin-top: 11px;
+    }
+  }
 }
+
 .BoxscoreItemInfo {
   justify-content: space-evenly;
 }

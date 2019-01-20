@@ -20,6 +20,8 @@ class BoxscoreCarousel extends Component {
         scoreboardDate: res.data.sports_content.games.game[0].date,
         scoreboardGameInfo: res.data.sports_content
       });
+    }).catch(function (error) {
+      console.log(error);
     });
   }
   decDay = () => {
@@ -53,14 +55,14 @@ class BoxscoreCarousel extends Component {
     var settings = {
       infinite: false,
       speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 2,
+      slidesToShow: 5,
+      slidesToScroll: 3,
       initialSlide: 0,
       responsive: [
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 4,
             slidesToScroll: 2
           }
         },

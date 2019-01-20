@@ -1,15 +1,34 @@
 @font-face {
   font-family: "Iran Sans";
-  src: url('./../assets/Fonts/IRANSansWeb(FaNum).ttf')
-
+  src: url("./assets/Fonts/IRANSansWeb(FaNum).ttf");
 }
 @font-face {
   font-family: "Flama";
-  src: url('./../assets/Fonts/Flama Regular.otf')
-
+  src: url("./assets/Fonts/Flama Regular.otf");
 }
 body {
   margin: 0;
   background-color: #e5e7e9;
   font-family: "Iran Sans";
+}
+#mainPageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2%;
+  direction: rtl;
+}
+#mainPageRightCol {
+  margin-right: 3%;
+  width: 50%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: fit-content;
+}
+#mainPageLeftCol {
+  margin-left: 3%;
+  width: 40%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: fit-content;
 }

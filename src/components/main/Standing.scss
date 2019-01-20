@@ -1,0 +1,37 @@
+#mainPageStandingContainer {
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  direction: ltr;
+  margin-right: 2%;
+  margin-top: 23px;
+  margin-left: 2%;
+  border: 1px solid;
+  border-radius: 5px;
+  .conferences {
+    width: 50%;
+    .title {
+      text-align: center;
+    }
+    .rankingTitle.west{
+        border-right: 1px solid;
+    }
+    .rankingTitle {
+      width: 100%;
+      display: flex;
+      text-align: center;
+      border-top: 1px solid;
+      .rankingTitleRank {
+        width: 10%;
+      }
+      .rankingTitleTeam {
+        width: 40%;
+      }
+      .rankingTitleStats {
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+      }
+    }
+  }
+}
