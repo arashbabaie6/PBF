@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "./App.scss";
-import MainSlider from "./components/main/MainSlider";
+import MainSlider from "./components/main/mainSlider/MainSlider";
+import MainLatestNews from "./components/main/mainLatestNews/MainLatestNews";
 
 import Hamburger from "./components/header/Hamburger";
 import BoxscoreCarousel from "./components/header/BoxscoreCarousel";
 import CanvasMenu from "./components/convasMenu/CanvasMenu";
-import Standing from "./components/main/Standing";
+import MainStanding from "./components/main/mainStanding/MainStanding";
+import MainLeaugeLeaders from "./components/main/mainLeaugeLeaders/MainLeaugeLeaders";
 
 class App extends Component {
   render() {
@@ -17,9 +19,15 @@ class App extends Component {
         <div id="mainPageContainer">
           <div id="mainPageRightCol">
             <MainSlider />
+            <div id="mainLatestNewsContainer">
+              <MainLatestNews />
+            </div>
           </div>
           <div id="mainPageLeftCol">
-            <Standing />
+            <MainStanding />
+            <div id="mainLeaugeLeadersContainer">
+              <MainLeaugeLeaders />
+            </div>
           </div>
         </div>
       </div>

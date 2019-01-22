@@ -1,10 +1,25 @@
 @import "./../../colorSheets";
-.HamburgerBars {
+.navBar {
   direction: rtl;
-  color: $mainBlue;
-  .fa-bars {
-    padding-top: 1%;
-    padding-right: 2%;
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  background-color: $mainBlue;
+  div#menuBarsContainer {
+    padding: 1%;
+    #menuBars {
+      cursor: pointer;
+      color: #ffffff;
+    }
+  }
+  div#menuItemContainer{
+    width: 50%;
+    ul{
+      li{
+        display: inline-block;
+        margin-right: 7%;
+        color:#ffffff;
+        cursor: pointer;
+      }
+    }
   }
 }

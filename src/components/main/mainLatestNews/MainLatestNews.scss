@@ -1,0 +1,31 @@
+#mainLatestNews{
+    width: 96%;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:1px solid;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    img{
+        position: absolute;
+        left: -9%;
+        top: 10%;
+        width: 33.5%;
+    }
+    #title{
+        h3{
+            margin: 0px;
+            padding-right: 2%;
+            border-bottom: 1px solid;
+        }
+        div{
+            padding: 2% 2% 0 0;
+            p{
+                cursor: pointer;
+                display: inline;
+            }
+        }
+    }
+}

@@ -11,13 +11,25 @@ class Hamburger extends Component {
 
   render() {
     return (
-      <div className="HamburgerBars">
+      <div className="navBar">
+        <div id="menuBarsContainer">
         <FontAwesomeIcon
           id="menuBars"
           icon={faBars}
           size="2x"
           onClick={this.handleClick}
         />
+        </div>
+        <div id="menuItemContainer">
+          <ul>
+            <li>اخبار</li>
+            <li>برنامه زمانی</li>
+            <li>آمار</li>
+            <li>بازیکن ها</li>
+            <li>تیم ها</li>
+            <li>جدول</li>
+          </ul>
+        </div>
       </div>
     );
   }

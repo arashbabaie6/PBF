@@ -5,6 +5,7 @@ import './MainSlider.scss'
 class MainSlider extends Component {
   render() {
     const settings = {
+      autoplay: true,
       dots: true,
       infinite: true,
       speed: 500,
