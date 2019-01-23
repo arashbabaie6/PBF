@@ -8,6 +8,9 @@ import MenuItem from "@material-ui/core/MenuItem";
 
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const styles = theme => ({
   root: {
@@ -25,14 +28,68 @@ const styles = theme => ({
 
 class MainLeaugeLeaders extends Component {
   state = {
-    leaugeLeaders: "pts",
-    leaugeLeaders2: "player"
+    statCategory: "PTS",
+    playerOrTeam: "Player",
+    leaders: "",
+    leaderImage: "",
+    teamImage: ""
   };
 
   handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState({ [event.target.name]: event.target.value, leaders: "" });
   };
+  componentDidMount() {
+    axios
+      .get(`http://localhost:5000/mainLeaugeLeaders/PTS/Player`)
+      .then(response => {
+        this.setState({
+          leaders: response.data,
+          leaderImage: response.data.rowSet[0][1]
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        this.setState({ leaders: "" });
+      });
+  }
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    axios
+      .get(
+        `http://localhost:5000/mainLeaugeLeaders/${this.state.statCategory}/${
+          this.state.playerOrTeam
+        }`
+      )
+      .then(res => {
+        if (
+          this.state.statCategory !== prevState.statCategory ||
+          this.state.playerOrTeam !== prevState.playerOrTeam
+        ) {
+          this.setState({
+            leaders: res.data
+          });
+          if (this.state.playerOrTeam === "Player") {
+            this.setState({
+              leaderImage: res.data.rowSet[0][1]
+            });
+          }
+          if (this.state.playerOrTeam === "Team") {
+            this.setState({
+              teamImage: res.data.rowSet[0][2]
+            });
+          }
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
   render() {
+    var leaderimage = `https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${
+      this.state.leaderImage
+    }.png`;
+    var teamimage = `https://www.nba.com/assets/logos/teams/primary/web/${
+      this.state.teamImage
+    }.svg`;
     const { classes } = this.props;
     const iranSans = { fontFamily: "Iran Sans", direction: "rtl" };
     return (
@@ -45,24 +102,24 @@ class MainLeaugeLeaders extends Component {
                 <Select
                   style={iranSans}
                   onChange={this.handleChange}
-                  value={this.state.leaugeLeaders}
+                  value={this.state.statCategory}
                   inputProps={{
-                    name: "leaugeLeaders"
+                    name: "statCategory"
                   }}
                 >
-                  <MenuItem style={iranSans} value={"pts"}>
+                  <MenuItem style={iranSans} value={"PTS"}>
                     امتیاز
                   </MenuItem>
-                  <MenuItem style={iranSans} value={"rbs"}>
+                  <MenuItem style={iranSans} value={"REB"}>
                     ریباند
                   </MenuItem>
-                  <MenuItem style={iranSans} value={"ast"}>
+                  <MenuItem style={iranSans} value={"AST"}>
                     پاس گل
                   </MenuItem>
-                  <MenuItem style={iranSans} value={"blk"}>
+                  <MenuItem style={iranSans} value={"BLK"}>
                     بلاک
                   </MenuItem>
-                  <MenuItem style={iranSans} value={"stl"}>
+                  <MenuItem style={iranSans} value={"STL"}>
                     توپ ربایی
                   </MenuItem>
                 </Select>
@@ -77,15 +134,15 @@ class MainLeaugeLeaders extends Component {
                 <Select
                   style={iranSans}
                   onChange={this.handleChange}
-                  value={this.state.leaugeLeaders2}
+                  value={this.state.playerOrTeam}
                   inputProps={{
-                    name: "leaugeLeaders2"
+                    name: "playerOrTeam"
                   }}
                 >
-                  <MenuItem style={iranSans} value={"player"}>
+                  <MenuItem style={iranSans} value={"Player"}>
                     بازیکن
                   </MenuItem>
-                  <MenuItem style={iranSans} value={"team"}>
+                  <MenuItem style={iranSans} value={"Team"}>
                     تیم
                   </MenuItem>
                 </Select>
@@ -94,17 +151,41 @@ class MainLeaugeLeaders extends Component {
           </div>
         </div>
         <div id="mainLeaugeLeadersResultContainer">
+          <div id="mainLeaugeLeadersResultImage">
+            {this.state.leaders === "" ? (
+              <div>
+                <FontAwesomeIcon icon={faSpinner} size="lg" spin />
+              </div>
+            ) : this.state.playerOrTeam === "Player" ? (
+              <img src={leaderimage} />
+            ) : (
+              <img src={teamimage} />
+            )}
+          </div>
           <div id="mainLeaugeLeadersResultList">
             <ul>
-              <li>1- James Harden</li>
-              <li>2- Lebron James</li>
-              <li>3- Stephen Curry</li>
-              <li>4- Kevin Durant</li>
-              <li>5- Giannis Antetukonmpo</li>
+              {this.state.leaders === "" ? (
+                <div>
+                  <FontAwesomeIcon icon={faSpinner} size="lg" spin />
+                </div>
+              ) : this.state.playerOrTeam === "Player" ? (
+                this.state.leaders.rowSet.map(leader => (
+                  <li key={leader[1]}>
+                    <span>{leader[0]} - </span>
+                    <span>{leader[2]}</span>
+                    <span style={{ float: "right" }}>{leader[6]}</span>
+                  </li>
+                ))
+              ) : (
+                this.state.leaders.rowSet.map(leader => (
+                  <li key={leader[1]}>
+                    <span>{leader[0]} - </span>
+                    <span>{leader[2]}</span>
+                    <span style={{ float: "right" }}>{leader[4]}</span>
+                  </li>
+                ))
+              )}
             </ul>
-          </div>
-          <div id="mainLeaugeLeadersResultImage">
-            <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201935.png" />
           </div>
         </div>
       </div>
