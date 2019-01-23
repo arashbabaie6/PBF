@@ -36,7 +36,7 @@ class MainLeaugeLeaders extends Component {
   };
 
   handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value, leaders: "" });
+    this.setState({ [event.target.name]: event.target.value });
   };
   componentDidMount() {
     axios
@@ -52,18 +52,20 @@ class MainLeaugeLeaders extends Component {
         this.setState({ leaders: "" });
       });
   }
+
   componentDidUpdate(prevProps, prevState, snapshot) {
-    axios
-      .get(
-        `http://localhost:5000/mainLeaugeLeaders/${this.state.statCategory}/${
-          this.state.playerOrTeam
-        }`
-      )
-      .then(res => {
-        if (
-          this.state.statCategory !== prevState.statCategory ||
-          this.state.playerOrTeam !== prevState.playerOrTeam
-        ) {
+    if (
+      this.state.statCategory !== prevState.statCategory ||
+      this.state.playerOrTeam !== prevState.playerOrTeam
+    ) {
+      this.setState({ leaders: "" });
+      axios
+        .get(
+          `http://localhost:5000/mainLeaugeLeaders/${this.state.statCategory}/${
+            this.state.playerOrTeam
+          }`
+        )
+        .then(res => {
           this.setState({
             leaders: res.data
           });
@@ -77,11 +79,11 @@ class MainLeaugeLeaders extends Component {
               teamImage: res.data.rowSet[0][2]
             });
           }
-        }
-      })
-      .catch(err => {
-        console.log(err);
-      });
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
   }
   render() {
     var leaderimage = `https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${
