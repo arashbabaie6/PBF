@@ -2,7 +2,10 @@
 .navBar {
   direction: rtl;
   display: flex;
+  position: fixed;
   flex-direction: row;
+  width: 100%;
+  z-index: 10;
   background-color: $mainBlue;
   div#menuBarsContainer {
     padding: 1%;

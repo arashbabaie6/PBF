@@ -1,7 +1,9 @@
 #mainLeaugeLeadersContainer {
+  width: 96%;
+  margin-right: 2%;
+  margin-left: 2%;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 2%;
   #mainLeaugeLeaders {
     border-radius: 10px;
     border: 1px solid;
@@ -11,25 +13,25 @@
     justify-content: space-around;
     flex-direction: row;
   }
-  #mainLeaugeLeadersResultContainer{
+  #mainLeaugeLeadersResultContainer {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    #mainLeaugeLeadersResultList{
-        width: 60%;
-        ul{
-            text-align: left;
-            direction: ltr;
-            li{
-                list-style: none;
-            }
+    #mainLeaugeLeadersResultList {
+      width: 60%;
+      ul {
+        text-align: left;
+        direction: ltr;
+        li {
+          list-style: none;
         }
+      }
     }
-    #mainLeaugeLeadersResultImage{
-        width: 40%;
-        img{
-            max-width: 93%;
-        }
+    #mainLeaugeLeadersResultImage {
+      width: 40%;
+      img {
+        max-width: 93%;
+      }
     }
   }
 }

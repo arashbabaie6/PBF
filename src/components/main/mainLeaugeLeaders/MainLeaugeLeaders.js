@@ -155,7 +155,7 @@ class MainLeaugeLeaders extends Component {
         <div id="mainLeaugeLeadersResultContainer">
           <div id="mainLeaugeLeadersResultImage">
             {this.state.leaders === "" ? (
-              <div>
+              <div style={{textAlign:'center'}}>
                 <FontAwesomeIcon icon={faSpinner} size="lg" spin />
               </div>
             ) : this.state.playerOrTeam === "Player" ? (
@@ -167,14 +167,14 @@ class MainLeaugeLeaders extends Component {
           <div id="mainLeaugeLeadersResultList">
             <ul>
               {this.state.leaders === "" ? (
-                <div>
+                <div style={{textAlign:'center'}}>
                   <FontAwesomeIcon icon={faSpinner} size="lg" spin />
                 </div>
               ) : this.state.playerOrTeam === "Player" ? (
                 this.state.leaders.rowSet.map(leader => (
                   <li key={leader[1]}>
                     <span>{leader[0]} - </span>
-                    <span>{leader[2]}</span>
+                    <span className="flama">{leader[2]}</span>
                     <span style={{ float: "right" }}>{leader[6]}</span>
                   </li>
                 ))
@@ -182,7 +182,7 @@ class MainLeaugeLeaders extends Component {
                 this.state.leaders.rowSet.map(leader => (
                   <li key={leader[1]}>
                     <span>{leader[0]} - </span>
-                    <span>{leader[2]}</span>
+                    <span className="flama">{leader[2]}</span>
                     <span style={{ float: "right" }}>{leader[4]}</span>
                   </li>
                 ))

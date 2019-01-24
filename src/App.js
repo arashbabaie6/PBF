@@ -8,6 +8,7 @@ import BoxscoreCarousel from "./components/header/BoxscoreCarousel";
 import CanvasMenu from "./components/convasMenu/CanvasMenu";
 import MainStanding from "./components/main/mainStanding/MainStanding";
 import MainLeaugeLeaders from "./components/main/mainLeaugeLeaders/MainLeaugeLeaders";
+import MainMvpPowerRanking from "./components/main/mainMvpPowerRanking/MainMvpPowerRanking";
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
             <div id="mainLatestNewsContainer">
               <MainLatestNews />
             </div>
+              <MainMvpPowerRanking />
           </div>
           <div id="mainPageLeftCol">
             <MainStanding />

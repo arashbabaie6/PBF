@@ -10,7 +10,7 @@ export default function MainStandingWT(props) {
         <img src={teamLogo} />
       </div>
       <div>
-        <p>{props.teamName}</p>
+        <p className="flama">{props.teamName}</p>
       </div>
     </div>
   );
