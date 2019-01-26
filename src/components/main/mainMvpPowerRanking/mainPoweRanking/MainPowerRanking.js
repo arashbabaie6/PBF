@@ -1,8 +1,8 @@
 import React from "react";
 
-function MainMvpLadder(props) {
+export default function MainPowerRanking(props) {
   return (
-    <div className="mainMvpLPoweradder">
+    <div className="mainMvpLPoweradder" style={{ borderRight: "none" }}>
       <ul>
         <li>
           <div>
@@ -18,6 +18,7 @@ function MainMvpLadder(props) {
             <p className="flama">#2 Giannis Antetokounmpo</p>
             <p>جایگاه هفته قبل : ‌5</p>
             <span>
+              {" "}
               امتیاز : 35.4 ، پاس گل : 8.5 ، ریباند : 6.3 ، توپ ربایی : 2
             </span>
           </div>
@@ -53,5 +54,3 @@ function MainMvpLadder(props) {
     </div>
   );
 }
-
-export default MainMvpLadder;

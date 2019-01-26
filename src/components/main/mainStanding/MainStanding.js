@@ -9,8 +9,8 @@ import MainStandingWL from "./MainStandingWL";
 import MainStandingWGB from "./MainStandingWGB";
 import MainStandingET from "./MainStandingWT";
 import MainStandingEW from "./MainStandingWW";
-import MainStandingEL from "./MainStandingWL";
-import MainStandingEGB from "./MainStandingWGB";
+import MainStandingEL from "./MainStandingEL";
+import MainStandingEGB from "./MainStandingEGB";
 
 class MainStanding extends Component {
   state = {
@@ -41,22 +41,54 @@ class MainStanding extends Component {
             ) : (
               <React.Fragment>
                 <div className="rankingTitleRank">
-                  <div>#</div>
-                  <div>1</div>
-                  <div>2</div>
-                  <div>3</div>
-                  <div>4</div>
-                  <div>5</div>
-                  <div>6</div>
-                  <div>7</div>
-                  <div>8</div>
-                  <div>9</div>
-                  <div>10</div>
-                  <div>11</div>
-                  <div>12</div>
-                  <div>13</div>
-                  <div>14</div>
-                  <div>15</div>
+                  <div>
+                    <span>#</span>
+                  </div>
+                  <div>
+                    <span>1</span>
+                  </div>
+                  <div>
+                    <span>2</span>
+                  </div>
+                  <div>
+                    <span>3</span>
+                  </div>
+                  <div>
+                    <span>4</span>
+                  </div>
+                  <div>
+                    <span>5</span>
+                  </div>
+                  <div>
+                    <span>6</span>
+                  </div>
+                  <div>
+                    <span>7</span>
+                  </div>
+                  <div>
+                    <span>8</span>
+                  </div>
+                  <div>
+                    <span>9</span>
+                  </div>
+                  <div>
+                    <span>10</span>
+                  </div>
+                  <div>
+                    <span>11</span>
+                  </div>
+                  <div>
+                    <span>12</span>
+                  </div>
+                  <div>
+                    <span>13</span>
+                  </div>
+                  <div>
+                    <span>14</span>
+                  </div>
+                  <div>
+                    <span>15</span>
+                  </div>
                 </div>
                 <div className="rankingTitleTeam">
                   <div>تیم</div>
@@ -65,7 +97,7 @@ class MainStanding extends Component {
                       <MainStandingWT key={t.id} teamName={t.abbreviation} />
                     ))
                   ) : (
-                    <React.Fragment></React.Fragment>
+                    <React.Fragment />
                   )}
                 </div>
                 <div className="rankingTitleStats">
@@ -92,7 +124,7 @@ class MainStanding extends Component {
                         />
                       ))
                     ) : (
-                      <React.Fragment></React.Fragment>
+                      <React.Fragment />
                     )}
                   </div>
                   <div className="rankingTitleGb">
@@ -105,7 +137,7 @@ class MainStanding extends Component {
                         />
                       ))
                     ) : (
-                      <React.Fragment></React.Fragment>
+                      <React.Fragment />
                     )}
                   </div>
                 </div>
@@ -121,22 +153,54 @@ class MainStanding extends Component {
             ) : (
               <React.Fragment>
                 <div className="rankingTitleRank">
-                  <div>#</div>
-                  <div>1</div>
-                  <div>2</div>
-                  <div>3</div>
-                  <div>4</div>
-                  <div>5</div>
-                  <div>6</div>
-                  <div>7</div>
-                  <div>8</div>
-                  <div>9</div>
-                  <div>10</div>
-                  <div>11</div>
-                  <div>12</div>
-                  <div>13</div>
-                  <div>14</div>
-                  <div>15</div>
+                <div>
+                    <span>#</span>
+                  </div>
+                  <div>
+                    <span>1</span>
+                  </div>
+                  <div>
+                    <span>2</span>
+                  </div>
+                  <div>
+                    <span>3</span>
+                  </div>
+                  <div>
+                    <span>4</span>
+                  </div>
+                  <div>
+                    <span>5</span>
+                  </div>
+                  <div>
+                    <span>6</span>
+                  </div>
+                  <div>
+                    <span>7</span>
+                  </div>
+                  <div>
+                    <span>8</span>
+                  </div>
+                  <div>
+                    <span>9</span>
+                  </div>
+                  <div>
+                    <span>10</span>
+                  </div>
+                  <div>
+                    <span>11</span>
+                  </div>
+                  <div>
+                    <span>12</span>
+                  </div>
+                  <div>
+                    <span>13</span>
+                  </div>
+                  <div>
+                    <span>14</span>
+                  </div>
+                  <div>
+                    <span>15</span>
+                  </div>
                 </div>
                 <div className="rankingTitleTeam">
                   <div>تیم</div>
@@ -145,7 +209,7 @@ class MainStanding extends Component {
                       <MainStandingET key={t.id} teamName={t.abbreviation} />
                     ))
                   ) : (
-                    <React.Fragment></React.Fragment>
+                    <React.Fragment />
                   )}
                 </div>
                 <div className="rankingTitleStats">
@@ -172,7 +236,7 @@ class MainStanding extends Component {
                         />
                       ))
                     ) : (
-                      <React.Fragment></React.Fragment>
+                      <React.Fragment />
                     )}
                   </div>
                   <div className="rankingTitleGb">
@@ -185,7 +249,7 @@ class MainStanding extends Component {
                         />
                       ))
                     ) : (
-                      <React.Fragment></React.Fragment>
+                      <React.Fragment />
                     )}
                   </div>
                 </div>

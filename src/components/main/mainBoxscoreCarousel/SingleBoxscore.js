@@ -1,5 +1,5 @@
 import React from "react";
-import nbaLogo from './../../assets/nbaTeamsLogo/nba-silhouette.png'
+import nbaLogo from './../../../assets/nbaTeamsLogo/nba-silhouette.png'
 
 export default function SingleBoxscore(props) {
   var homeLogo= `http://cdn.nba.net/assets/logos/teams/secondary/web/${props.gameInfo.home.abbreviation}.svg`;

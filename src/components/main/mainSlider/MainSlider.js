@@ -16,7 +16,7 @@ class MainSlider extends Component {
       <div id="mainSliderContainer">
         <Slider {...settings}>
           <div className="mainSliderSlide">
-              <img src='https://cdn.nba.net/nba-drupal-prod/styles/landscape_640w/s3/2019-01/james-harden-dunk-lakers.jpg?itok=jrCg6biI%20640w' ></img>
+              <img src='https://cdn.nba.net/nba-drupal-prod/styles/landscape_1045w/s3/2019-01/james-harden-dunk-lakers.jpg?itok=jrCg6biI%20640w' ></img>
             <h3>درخشش جیمز هاردن در نبود پادشاه لیکرز</h3>
           </div>
           <div className="mainSliderSlide">

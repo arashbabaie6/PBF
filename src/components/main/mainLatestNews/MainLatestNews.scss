@@ -3,17 +3,21 @@
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    img{
-        position: absolute;
-        left: -9%;
-        top: 10%;
-        width: 33.5%;
-    }
     #title{
-        h3{
-            margin: 0px;
-            padding-right: 2%;
+        div:first-child{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 2%;
             border-bottom: 1px solid;
+            padding-top: 1%;
+            h4{
+                cursor: pointer;
+            }
+        }
+        h3,h4{
+            display: inline;
+            margin: 0;
         }
         div{
             padding: 2% 2% 0 0;

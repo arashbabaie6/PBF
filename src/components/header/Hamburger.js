@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Hamburger.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import logo from "./../../assets/nbaTeamsLogo/logowide.svg";
 
 class Hamburger extends Component {
   handleClick = () => {
@@ -13,12 +14,12 @@ class Hamburger extends Component {
     return (
       <div className="navBar">
         <div id="menuBarsContainer">
-        <FontAwesomeIcon
-          id="menuBars"
-          icon={faBars}
-          size="2x"
-          onClick={this.handleClick}
-        />
+          <FontAwesomeIcon
+            id="menuBars"
+            icon={faBars}
+            size="2x"
+            onClick={this.handleClick}
+          />
         </div>
         <div id="menuItemContainer">
           <ul>

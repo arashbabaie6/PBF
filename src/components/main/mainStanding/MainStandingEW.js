@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function MainStandingEW(props) {
-  return <div>{props.teamWins}</div>;
+  return (
+    <div>
+      <span>{props.teamWins}</span>
+    </div>
+  );
 }

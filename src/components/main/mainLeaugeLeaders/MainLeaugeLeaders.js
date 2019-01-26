@@ -182,7 +182,7 @@ class MainLeaugeLeaders extends Component {
                 this.state.leaders.rowSet.map(leader => (
                   <li key={leader[1]}>
                     <span>{leader[0]} - </span>
-                    <span className="flama">{leader[2]}</span>
+                    <span className="flama">{leader[3]}</span>
                     <span style={{ float: "right" }}>{leader[4]}</span>
                   </li>
                 ))

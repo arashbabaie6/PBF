@@ -20,7 +20,7 @@
     }
     .title.east {
       background-color: $mainBlue;
-      color:#ffffff;
+      color: #ffffff;
     }
     .rankingTitle {
       width: 100%;
@@ -31,12 +31,18 @@
         width: 10%;
         div {
           height: 40px;
+          position: relative;
+          span {
+            position: absolute;
+            top: 6.5px;
+          }
         }
         :first-child {
           height: auto;
-        }
-        :nth-child(2) {
-          // padding-top: 5px;
+          :first-child {
+            height: auto;
+            position: relative;
+          }
         }
       }
       .rankingTitleTeam {
@@ -45,47 +51,68 @@
       .rankingTitleStats {
         display: flex;
         width: 50%;
-        justify-content: space-around;
+        justify-content: space-evenly;
         div.rankingTitleWin {
           div {
             height: 40px;
+            position: relative;
+            span {
+              position: absolute;
+              top: 6.5px;
+              left: 0;
+            }
           }
           :first-child {
             height: auto;
-          }
-          :nth-child(2) {
-            // padding-top: 5px;
+            :first-child {
+              height: auto;
+              position: relative;
+            }
           }
         }
       }
       .rankingTitleLoos {
         div {
           height: 40px;
+          position: relative;
+          span {
+            position: absolute;
+            top: 6.5px;
+            left: 30%;
+          }
         }
         :first-child {
           height: auto;
-        }
-        :nth-child(2) {
-          // padding-top: 5px;
+          :first-child {
+            height: auto;
+            position: relative;
+          }
         }
       }
       .rankingTitleGb {
         div {
           height: 40px;
+          position: relative;
+          span {
+            position: absolute;
+            top: 6.5px;
+            left: 0;
+          }
         }
         :first-child {
           height: auto;
-        }
-        :nth-child(2) {
-          // padding-top: 5px;
+          :first-child {
+            height: auto;
+            position: relative;
+          }
         }
       }
     }
   }
-  .conferences.west{
+  .conferences.west {
     border-right: 1px solid;
   }
-  .conferences.east{
+  .conferences.east {
     border-left: 1px solid;
   }
 }
@@ -94,7 +121,7 @@
   flex-direction: row;
   :first-child {
     width: 60%;
-    height:40px;
+    height: 40px;
     img {
       width: 60%;
     }

@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 class CanvasMenu extends Component {
-  handleClick = () => {
+  handleClickMenu = () => {
     document.getElementById("menuBars").style.visibility = "visible";
-    document.getElementById("canvasMenu").style.right = "-25vw";
+    document.getElementById("canvasMenu").style.right = "-80vw";
   };
   render() {
     return (
@@ -16,7 +16,7 @@ class CanvasMenu extends Component {
             id="menuCross"
             icon={faTimes}
             size="2x"
-            onClick={this.handleClick}
+            onClick={this.handleClickMenu}
           />
         </div>
         <div>

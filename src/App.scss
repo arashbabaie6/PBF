@@ -17,31 +17,3 @@ body {
   background-color: #e5e7e9;
   font-family: "Iran Sans";
 }
-#mainPageContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 2%;
-  direction: rtl;
-}
-#mainPageRightCol {
-  margin-right: 3%;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-}
-#mainPageLeftCol {
-  margin-left: 3%;
-  width: 40%;
-  height: fit-content;
-}
-#mainLatestNewsContainer{
-  width: 100%;
-  background-color: #ffffff;
-  margin-top: 20px;
-  border-radius: 10px;
-}
-#mainLeaugeLeadersContainer{
-  background-color: #ffffff;
-}

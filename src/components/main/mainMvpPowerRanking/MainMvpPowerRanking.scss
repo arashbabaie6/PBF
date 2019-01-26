@@ -8,6 +8,32 @@
   #mainMvpPowerRanking {
     display: flex;
     flex-direction: row;
+    .mainMvpLPoweradder {
+      direction: ltr;
+      width: 50%;
+      border-right: 1px solid;
+      ul {
+        padding: 0;
+        margin: 0;
+        li {
+          list-style: none;
+          padding-top: 1%;
+          div {
+            text-align: center;
+            p {
+              margin: 0;
+            }
+            span {
+              font-size: 13px;
+            }
+          }
+        }
+        li:nth-child(even){
+            background-color: #e5e7e9;
+        }
+      }
+    }
+    
   }
   #mainMvpPowerRankingTitle {
     display: flex;

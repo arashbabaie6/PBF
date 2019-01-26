@@ -1,8 +1,8 @@
-@import "../../colorSheets";
+@import "../../../colorSheets.scss";
 #BoxscoreCarouselContainer {
   text-align: center;
   background-color: #ffffff;
-  padding: 5% 5% 27px 5%;
+  padding: 1% 5% 27px 5%;
 
  
   .slick-arrow::before {

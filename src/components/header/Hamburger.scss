@@ -2,24 +2,26 @@
 .navBar {
   direction: rtl;
   display: flex;
-  position: fixed;
   flex-direction: row;
   width: 100%;
-  z-index: 10;
   background-color: $mainBlue;
   div#menuBarsContainer {
-    padding: 1%;
+    padding: 20px;
     #menuBars {
       cursor: pointer;
       color: #ffffff;
     }
   }
   div#menuItemContainer{
-    width: 50%;
+    width: 100%;
     ul{
+      margin-top: 24px;
+      padding: 0;
+      justify-content: space-evenly;
+      display: flex;
+      flex-direction: row;
       li{
         display: inline-block;
-        margin-right: 7%;
         color:#ffffff;
         cursor: pointer;
       }
